@@ -21,14 +21,12 @@ public class Stage1_Puzzle1_rotSquare : MonoBehaviour
     {
         isHolding = true;
         rotSpeed *= -1;
-        Debug.Log("으아아악 눌럿다!");
     }
 
     public void OnPointerLeftUp()
     {
         isHolding = false;
         rotSpeed *= -1;
-        Debug.Log("으아아악 땟다!");
     }
     public void OnPointerRightDown()
     {
