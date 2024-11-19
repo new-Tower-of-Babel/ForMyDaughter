@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 4050756734526776917, guid: 698374ce585cdb248a97a36622f78ad4, type: 3}
   tilesParent: {fileID: 75982407}
+  clearCondition: 0
 --- !u!114 &75982409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18227,7 +18228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1757562686
 Transform:
   m_ObjectHideFlags: 0

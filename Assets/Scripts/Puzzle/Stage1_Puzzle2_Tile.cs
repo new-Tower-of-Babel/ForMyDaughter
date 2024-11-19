@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -10,9 +8,9 @@ public class Stage1_Puzzle2_Tile : MonoBehaviour, IPointerClickHandler
 {
     private TextMeshProUGUI textNumeric;
     private Stage1_Puzzle2_Board board;
-    private Vector3 correctPosition; 
+    private Vector3 correctPosition;
+    public bool isCorrected { private set; get; } = false;
     private int numeric;
-    private IPointerClickHandler pointerClickHandlerImplementation;
 
     public int Numeric
     {
@@ -24,7 +22,7 @@ public class Stage1_Puzzle2_Tile : MonoBehaviour, IPointerClickHandler
         get => numeric;
     }
 
-    public void Setup(Stage1_Puzzle2_Board board,int hideNumeric, int numeric)
+    public void Setup(Stage1_Puzzle2_Board board, int hideNumeric, int numeric)
     {
         this.board = board;
         textNumeric = GetComponentInChildren<TextMeshProUGUI>();
@@ -36,18 +34,19 @@ public class Stage1_Puzzle2_Tile : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public void setCorrectPosition()
+    public void SetCorrectPosition()
     {
         correctPosition = GetComponent<RectTransform>().localPosition;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        board.IsMoveTile(this);
     }
 
     public void OnMoveTo(Vector3 end)
     {
-        StartCoroutine("MoveTo", end);
+        StartCoroutine(MoveTo(end));
     }
 
     private IEnumerator MoveTo(Vector3 end)
@@ -63,5 +62,10 @@ public class Stage1_Puzzle2_Tile : MonoBehaviour, IPointerClickHandler
             GetComponent<RectTransform>().localPosition = Vector3.Lerp(start, end, percent);
             yield return null;
         }
+
+        isCorrected = correctPosition == GetComponent<RectTransform>().localPosition;
+
+        // 각 이동 후 게임 종료 여부 확인
+        board.IsGameOver();
     }
 }
