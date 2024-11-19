@@ -11,9 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool _isMoving = false;
-    private bool _isRunning = false;
     private bool _isJumping = false;
-
     public bool _isFacingRight = true;
 
     public bool IsFacingRight
@@ -43,19 +41,6 @@ public class PlayerController : MonoBehaviour
         {
             _isMoving = value;
             animator.SetBool("isMoving", value);
-        }
-    }
-
-    public bool IsRunning
-    {
-        get
-        {
-            return _isRunning;
-        }
-        set
-        {
-            _isRunning = value;
-            animator.SetBool("isRunning", value);
         }
     }
 
