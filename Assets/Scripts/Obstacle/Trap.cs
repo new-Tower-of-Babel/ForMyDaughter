@@ -34,7 +34,6 @@ public class Trap : MonoBehaviour
             if (playerInfo != null)
             {
                 playerInfo.health -= damagePerSecond;
-                Debug.Log("Player damaged! Current health: " + playerInfo.health);
             }
 
             yield return new WaitForSeconds(1f); // 1초 간격으로 데미지 적용

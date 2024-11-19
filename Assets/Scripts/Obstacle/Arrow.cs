@@ -56,10 +56,10 @@ public class Arrow : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // 플레이어에게 데미지를 준다
-            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            PlayerInfo playerInfo = player.GetComponent<PlayerInfo>();
+            if (playerInfo != null)
             {
-                playerHealth.TakeDamage(damage);
+                playerInfo.health -= damage;
             }
 
             // 화살 파괴
