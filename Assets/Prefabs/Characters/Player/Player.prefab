@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 513266167696779097}
   - component: {fileID: 3027514936426101768}
   - component: {fileID: 6403827399627723117}
+  - component: {fileID: 6875807957452360559}
   - component: {fileID: 3303552452200978878}
   m_Layer: 0
   m_Name: Player
@@ -136,10 +137,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -266,6 +267,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6875807957452360559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5745914780544985144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cff9194b41b6418b9ac9e2c48fd32d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  runSpeed: 8
+  jumpForce: 10
 --- !u!114 &3303552452200978878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,5 +294,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d01da45761c48bea8de3236a136ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 8
-  _isFacingRight: 1

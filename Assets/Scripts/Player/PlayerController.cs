@@ -1,71 +1,34 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float runSpeed = 8f;
+    
     private Vector2 moveInput;
+    private PlayerStats playerStats;
     private Rigidbody2D rb;
     private Animator animator;
     private bool _isMoving = false;
     private bool _isJumping = false;
-    public bool _isFacingRight = true;
-
-    public bool IsFacingRight
-    {
-        get
-        {
-            return _isFacingRight;
-        }
-        set
-        {
-            if (_isFacingRight != value)
-            {
-                transform.localScale *= new Vector2(-1, 1);
-            }
-            
-            _isFacingRight = value;
-        }
-    }
-
-    public bool IsMoving
-    {
-        get
-        {
-            return _isMoving;
-        }
-        private set
-        {
-            _isMoving = value;
-            animator.SetBool("isMoving", value);
-        }
-    }
-
-    public bool IsJumping
-    {
-        get
-        {
-            return _isJumping;
-        }
-        set
-        {
-            _isJumping = value;
-            animator.SetBool("isJumping", value);
-        }
-    }
-
+    private bool _isSittingDown = false;
+    private bool _isAttacking = false;
+    private bool _isFacingRight = true;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerStats = GetComponent<PlayerStats>();
     }
     
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * runSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput.x * playerStats.runSpeed, rb.velocity.y);
+    }
+
+    private void Update()
+    {
+        CheckIfLanded();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -77,17 +40,41 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        
+        if (context.performed && !IsJumping)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, playerStats.jumpForce);
+            IsJumping = true;
+        }
     }
 
     public void OnSit(InputAction.CallbackContext context)
     {
-        
+        if (context.performed)
+        {
+            IsSittingDown = true;
+            IsMoving = false;
+        }
+        else if (context.canceled)
+        {
+            IsSittingDown = false;
+        }
     }
     
     public void OnAttack(InputAction.CallbackContext context)
     {
-        
+        if (context.performed && !_isAttacking)
+        {
+            _isAttacking = true;
+            animator.SetTrigger("attack");
+        }
+    }
+
+    private void CheckIfLanded()
+    {
+        if (IsJumping && rb.velocity.y <= 0 && Mathf.Approximately(rb.velocity.y, 0))
+        {
+            IsJumping = false;
+        }
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -101,6 +88,50 @@ public class PlayerController : MonoBehaviour
         {
             //face the left
             IsFacingRight = false;
+        }
+    }
+    
+    public bool IsMoving
+    {
+        get => _isMoving;
+        private set
+        {
+            _isMoving = value;
+            animator.SetBool("isMoving", value);
+        }
+    }
+
+    public bool IsJumping
+    {
+        get => _isJumping;
+        set
+        {
+            _isJumping = value;
+            animator.SetBool("isJumping", value);
+        }
+    }
+
+    public bool IsSittingDown
+    {
+        get => _isSittingDown;
+        set
+        {
+            _isSittingDown = value;
+            animator.SetBool("isSitting", value);
+        }
+    }
+    
+    public bool IsFacingRight
+    {
+        get => _isFacingRight;
+        set
+        {
+            if (_isFacingRight != value)
+            {
+                transform.localScale *= new Vector2(-1, 1);
+            }
+            
+            _isFacingRight = value;
         }
     }
 }
