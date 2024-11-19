@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool _isMoving = false;
     private bool _isJumping = false;
+    private bool _isFalling = false;
     private bool _isSittingDown = false;
     private bool _isAttacking = false;
     private bool _isFacingRight = true;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        CheckIfFalling();
         CheckIfLanded();
     }
 
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, playerStats.jumpForce);
             IsJumping = true;
+            _isFalling = false;
         }
     }
 
@@ -69,11 +72,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void CheckIfFalling()
+    {
+        if (rb.velocity.y < 0 && !IsJumping)
+        {
+            IsFalling = true;
+        }
+    }
+    
     private void CheckIfLanded()
     {
-        if (IsJumping && rb.velocity.y <= 0 && Mathf.Approximately(rb.velocity.y, 0))
+        if ((IsJumping || IsFalling) && rb.velocity.y == 0)
         {
             IsJumping = false;
+            IsFalling = false;
         }
     }
 
@@ -108,6 +120,16 @@ public class PlayerController : MonoBehaviour
         {
             _isJumping = value;
             animator.SetBool("isJumping", value);
+        }
+    }
+
+    public bool IsFalling
+    {
+        get => _isFalling;
+        set
+        {
+            _isFalling = value;
+            animator.SetBool("isFalling", value);
         }
     }
 

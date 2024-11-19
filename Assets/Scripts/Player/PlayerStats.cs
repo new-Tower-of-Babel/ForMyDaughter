@@ -40,6 +40,6 @@ public class PlayerStats : MonoBehaviour
     void Death()
     {
         _animator.SetTrigger("Death");
-        Invoke("GameOver", 1.5f);
+        // Invoke("GameOver", 1.5f);
     }
 }
