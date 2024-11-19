@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeTrap : MonoBehaviour
+public class Trap : MonoBehaviour
 {
-    public float damagePerSecond = 5f;
+    public float damagePerSecond;
     private bool isDamaging = false;
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +30,6 @@ public class SpikeTrap : MonoBehaviour
         
         while (isDamaging)
         {
-            
             PlayerInfo playerInfo = player.GetComponent<PlayerInfo>(); // PlayerInfo 스크립트가 있다고 가정
             if (playerInfo != null)
             {
@@ -39,7 +38,6 @@ public class SpikeTrap : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1f); // 1초 간격으로 데미지 적용
-            
         }
     }
 */
