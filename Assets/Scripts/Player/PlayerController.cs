@@ -150,9 +150,7 @@ public class PlayerController : MonoBehaviour
         {
             if (_isFacingRight != value)
             {
-                Vector3 scale = transform.localScale;
-                scale.x *= -1; // x축만 반전
-                transform.localScale = scale; // z 값은 유지됨
+                transform.localScale *= new Vector2(-1, 1);
             }
             
             _isFacingRight = value;
