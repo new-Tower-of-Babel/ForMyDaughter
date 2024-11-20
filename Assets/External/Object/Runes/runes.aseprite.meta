@@ -1,0 +1,1735 @@
+fileFormatVersion: 2
+guid: 24dde1d524fef42fb84e2bd26b319820
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: runes_Frame_0
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 221
+      width: 17
+      height: 24
+    spriteID: 84d69fdc1a7f841868a67b336bacb5de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 221}
+  - name: runes_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 18
+      height: 23
+    spriteID: 8cabdc3a56ef141848daad4a47a1a285
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: runes_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 196
+      width: 16
+      height: 22
+    spriteID: 0d647c3876e704ea3813cd7fa0ecb559
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 196}
+  - name: runes_Frame_3
+    originalName: 
+    pivot: {x: 0.5625, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 154
+      width: 16
+      height: 19
+    spriteID: 108489205806146b2a064b0dc0fb3230
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 154}
+  - name: runes_Frame_4
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 4
+      width: 21
+      height: 16
+    spriteID: 308a3aa9e383942c8932ab339eeef19e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 4}
+  - name: runes_Frame_5
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.35}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 193
+      width: 15
+      height: 20
+    spriteID: b979850eb938b434b9893212fd5bed81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 193}
+  - name: runes_Frame_6
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 220
+      width: 17
+      height: 19
+    spriteID: 300e68c0d9d3847a0858ed8a35ad7058
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 220}
+  - name: runes_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 4
+      width: 18
+      height: 19
+    spriteID: f4b3d9ec9c3f54389ac7bea5837a827d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 4}
+  - name: runes_Frame_8
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 4
+      width: 17
+      height: 24
+    spriteID: 45accf0e6456842da9edf8facbd396a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 4}
+  - name: runes_Frame_9
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 35
+      width: 18
+      height: 23
+    spriteID: f27104c66ceee40ecabaa075a0547820
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 35}
+  - name: runes_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 226
+      width: 16
+      height: 22
+    spriteID: 4cc65a88061b946919851dafc4a12ffd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 226}
+  - name: runes_Frame_11
+    originalName: 
+    pivot: {x: 0.5625, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 181
+      width: 16
+      height: 19
+    spriteID: 20c656ee32a6d4ca580e0a0b687f5bc7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 181}
+  - name: runes_Frame_12
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 28
+      width: 21
+      height: 16
+    spriteID: 95eb160ff0058485087392966ec2e16d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 28}
+  - name: runes_Frame_13
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.35}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 221
+      width: 15
+      height: 20
+    spriteID: 52336cf519959483fbc8e68dbca30865
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 221}
+  - name: runes_Frame_14
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 172
+      width: 17
+      height: 19
+    spriteID: 440245177e74c4f78bb8b64a6bfce84f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 172}
+  - name: runes_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 31
+      width: 18
+      height: 19
+    spriteID: 584995d2bf79046f7bba0d9a79dff4ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 31}
+  - name: runes_Frame_16
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 36
+      width: 17
+      height: 24
+    spriteID: f2517a4d5f9b94a88b166379908b818c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 36}
+  - name: runes_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 66
+      width: 18
+      height: 23
+    spriteID: 20556e03fa7d4473698be7a6427baa74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 66}
+  - name: runes_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 4
+      width: 16
+      height: 22
+    spriteID: bdbcfbc9102184d25b2e63223544c51f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 4}
+  - name: runes_Frame_19
+    originalName: 
+    pivot: {x: 0.5625, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 208
+      width: 16
+      height: 19
+    spriteID: 9212b3ade00504f7091dd1510899701c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 208}
+  - name: runes_Frame_20
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 52
+      width: 21
+      height: 16
+    spriteID: 347455c67494742bfbe4dc4204f2fc42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 52}
+  - name: runes_Frame_21
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.35}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 159
+      y: 4
+      width: 15
+      height: 20
+    spriteID: 0b215b08c9d65407d97f5b4961213a2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 159, y: 4}
+  - name: runes_Frame_22
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 199
+      width: 17
+      height: 19
+    spriteID: 8931982cb191f4ca08ece33f182bdb87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 199}
+  - name: runes_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 58
+      width: 18
+      height: 19
+    spriteID: ad0384b7b8b7040d6955c43c124036a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 58}
+  - name: runes_Frame_24
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 68
+      width: 17
+      height: 24
+    spriteID: a98e53fa9c1944f2fa07a20986032430
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 68}
+  - name: runes_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 97
+      width: 18
+      height: 23
+    spriteID: 270ea0480aa2f40abaf66e5f500e462a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 97}
+  - name: runes_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 34
+      width: 16
+      height: 22
+    spriteID: 4103dcb95a8424943807f721e0450b24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 34}
+  - name: runes_Frame_27
+    originalName: 
+    pivot: {x: 0.5625, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 85
+      width: 16
+      height: 19
+    spriteID: 87ff24df35e0d4d2fa1676267452543d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 85}
+  - name: runes_Frame_28
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 76
+      width: 21
+      height: 16
+    spriteID: a91b552444d18438786fc833e17ff030
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 76}
+  - name: runes_Frame_29
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.35}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 159
+      y: 32
+      width: 15
+      height: 20
+    spriteID: ffddea902bbd44f64be352cbe033e0c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 159, y: 32}
+  - name: runes_Frame_30
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 226
+      width: 17
+      height: 19
+    spriteID: f9e6e0d5a9fa74427a51c84cb9d48db4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 226}
+  - name: runes_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 85
+      width: 18
+      height: 19
+    spriteID: e36eaf9418279477786c67151c63fdb2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 85}
+  - name: runes_Frame_32
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 100
+      width: 17
+      height: 24
+    spriteID: 166e2bc1655204f9d89185fbf84bb1e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 100}
+  - name: runes_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 128
+      width: 18
+      height: 23
+    spriteID: cbd8e492f0af44d99b3d9eb6c376f999
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 128}
+  - name: runes_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 64
+      width: 16
+      height: 22
+    spriteID: 600a998937846455eb6ac5d23a1ada80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 64}
+  - name: runes_Frame_35
+    originalName: 
+    pivot: {x: 0.5625, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 112
+      width: 16
+      height: 19
+    spriteID: f8a94e0ad4fc64e9ba92124e2f19fc98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 112}
+  - name: runes_Frame_36
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 100
+      width: 21
+      height: 16
+    spriteID: 9139d136d7e1243c5afdc184ded2ad2f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 100}
+  - name: runes_Frame_37
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.35}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 159
+      y: 60
+      width: 15
+      height: 20
+    spriteID: 454184da656444da3b45e63104674b12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 159, y: 60}
+  - name: runes_Frame_38
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 4
+      width: 17
+      height: 19
+    spriteID: ff3b38b7575c0469e9060b32f2217893
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 4}
+  - name: runes_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 112
+      width: 18
+      height: 19
+    spriteID: 9bc36ff464740485db60726fb1aac28c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 112}
+  - name: runes_Frame_40
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 132
+      width: 17
+      height: 24
+    spriteID: a1336faa576ce4dc4b1d49628c325804
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 132}
+  - name: runes_Frame_41
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 159
+      width: 18
+      height: 23
+    spriteID: c46808ac82bda4134a7f642c307b6c8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 159}
+  - name: runes_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 94
+      width: 16
+      height: 22
+    spriteID: a705a60783d454eb6a371ff19f86ad68
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 94}
+  - name: runes_Frame_43
+    originalName: 
+    pivot: {x: 0.5625, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 139
+      width: 16
+      height: 19
+    spriteID: 5a270887015b44a24a8dc7f433066d08
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 139}
+  - name: runes_Frame_44
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 124
+      width: 21
+      height: 16
+    spriteID: 49badc227aa3d42eea191407158eb8b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 124}
+  - name: runes_Frame_45
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.35}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 159
+      y: 88
+      width: 15
+      height: 20
+    spriteID: 6c1564523ff0c46d1a7a4c69a5665669
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 159, y: 88}
+  - name: runes_Frame_46
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 31
+      width: 17
+      height: 19
+    spriteID: 4457b5629039e4e99b450ff75b68cac6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 31}
+  - name: runes_Frame_47
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 139
+      width: 18
+      height: 19
+    spriteID: bd8e650d32bb4473dbdf7a7b5e3c1cfe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 139}
+  - name: runes_Frame_48
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 164
+      width: 17
+      height: 24
+    spriteID: d954bfb5195dd4efea0f41fc008466b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 164}
+  - name: runes_Frame_49
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 190
+      width: 18
+      height: 23
+    spriteID: 00649352b56a849fbada99cd475880c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 190}
+  - name: runes_Frame_50
+    originalName: 
+    pivot: {x: 0.5, y: -0.22727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 124
+      width: 16
+      height: 22
+    spriteID: dd9e2c98ee55a48c59ef359ac2c1b0ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 124}
+  - name: runes_Frame_51
+    originalName: 
+    pivot: {x: 0.5625, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 166
+      width: 16
+      height: 19
+    spriteID: 59825fd134afc48e78e919ebb28bc12c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 166}
+  - name: runes_Frame_52
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.4375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 148
+      width: 21
+      height: 16
+    spriteID: 3bc439efe6efb4895ba471e0b386c437
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 148}
+  - name: runes_Frame_53
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.35}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 159
+      y: 116
+      width: 15
+      height: 20
+    spriteID: 9df9e2c87efab4c72baafce94a06aa48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 159, y: 116}
+  - name: runes_Frame_54
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.31578946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 58
+      width: 17
+      height: 19
+    spriteID: 1d26b966eb22643da922131702f49310
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 58}
+  - name: runes_Frame_55
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 166
+      width: 18
+      height: 19
+    spriteID: 9eb4ffeeedb9c4294bd36ce6635f02f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 166}
+  - name: runes_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 193
+      width: 18
+      height: 19
+    spriteID: c0628776ebded4fe1ad8f657ff2d13ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 193}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 835062999
+    name: runes
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: runes_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 7
+        y: 4
+        width: 17
+        height: 24
+      spriteId: 84d69fdc1a7f841868a67b336bacb5de
+    - name: runes_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: 8cabdc3a56ef141848daad4a47a1a285
+    - name: runes_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 5
+        width: 16
+        height: 22
+      spriteId: 0d647c3876e704ea3813cd7fa0ecb559
+    - name: runes_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 7
+        y: 6
+        width: 16
+        height: 19
+      spriteId: 108489205806146b2a064b0dc0fb3230
+    - name: runes_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 6
+        y: 7
+        width: 21
+        height: 16
+      spriteId: 308a3aa9e383942c8932ab339eeef19e
+    - name: runes_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 8
+        y: 7
+        width: 15
+        height: 20
+      spriteId: b979850eb938b434b9893212fd5bed81
+    - name: runes_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 7
+        y: 6
+        width: 17
+        height: 19
+      spriteId: 300e68c0d9d3847a0858ed8a35ad7058
+    - name: runes_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: f4b3d9ec9c3f54389ac7bea5837a827d
+    - name: runes_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 7
+        y: 4
+        width: 17
+        height: 24
+      spriteId: 45accf0e6456842da9edf8facbd396a5
+    - name: runes_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 6
+        y: 4
+        width: 18
+        height: 23
+      spriteId: f27104c66ceee40ecabaa075a0547820
+    - name: runes_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 8
+        y: 5
+        width: 16
+        height: 22
+      spriteId: 4cc65a88061b946919851dafc4a12ffd
+    - name: runes_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 7
+        y: 6
+        width: 16
+        height: 19
+      spriteId: 20c656ee32a6d4ca580e0a0b687f5bc7
+    - name: runes_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 6
+        y: 7
+        width: 21
+        height: 16
+      spriteId: 95eb160ff0058485087392966ec2e16d
+    - name: runes_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 8
+        y: 7
+        width: 15
+        height: 20
+      spriteId: 52336cf519959483fbc8e68dbca30865
+    - name: runes_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 7
+        y: 6
+        width: 17
+        height: 19
+      spriteId: 440245177e74c4f78bb8b64a6bfce84f
+    - name: runes_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: 584995d2bf79046f7bba0d9a79dff4ad
+    - name: runes_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 7
+        y: 4
+        width: 17
+        height: 24
+      spriteId: f2517a4d5f9b94a88b166379908b818c
+    - name: runes_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: 20556e03fa7d4473698be7a6427baa74
+    - name: runes_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 8
+        y: 5
+        width: 16
+        height: 22
+      spriteId: bdbcfbc9102184d25b2e63223544c51f
+    - name: runes_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 7
+        y: 6
+        width: 16
+        height: 19
+      spriteId: 9212b3ade00504f7091dd1510899701c
+    - name: runes_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 6
+        y: 7
+        width: 21
+        height: 16
+      spriteId: 347455c67494742bfbe4dc4204f2fc42
+    - name: runes_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 8
+        y: 7
+        width: 15
+        height: 20
+      spriteId: 0b215b08c9d65407d97f5b4961213a2c
+    - name: runes_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 7
+        y: 6
+        width: 17
+        height: 19
+      spriteId: 8931982cb191f4ca08ece33f182bdb87
+    - name: runes_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: ad0384b7b8b7040d6955c43c124036a1
+    - name: runes_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 7
+        y: 4
+        width: 17
+        height: 24
+      spriteId: a98e53fa9c1944f2fa07a20986032430
+    - name: runes_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: 270ea0480aa2f40abaf66e5f500e462a
+    - name: runes_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 8
+        y: 5
+        width: 16
+        height: 22
+      spriteId: 4103dcb95a8424943807f721e0450b24
+    - name: runes_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 7
+        y: 6
+        width: 16
+        height: 19
+      spriteId: 87ff24df35e0d4d2fa1676267452543d
+    - name: runes_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 6
+        y: 7
+        width: 21
+        height: 16
+      spriteId: a91b552444d18438786fc833e17ff030
+    - name: runes_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 8
+        y: 7
+        width: 15
+        height: 20
+      spriteId: ffddea902bbd44f64be352cbe033e0c4
+    - name: runes_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 7
+        y: 6
+        width: 17
+        height: 19
+      spriteId: f9e6e0d5a9fa74427a51c84cb9d48db4
+    - name: runes_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: e36eaf9418279477786c67151c63fdb2
+    - name: runes_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 7
+        y: 4
+        width: 17
+        height: 24
+      spriteId: 166e2bc1655204f9d89185fbf84bb1e0
+    - name: runes_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: cbd8e492f0af44d99b3d9eb6c376f999
+    - name: runes_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 8
+        y: 5
+        width: 16
+        height: 22
+      spriteId: 600a998937846455eb6ac5d23a1ada80
+    - name: runes_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 7
+        y: 6
+        width: 16
+        height: 19
+      spriteId: f8a94e0ad4fc64e9ba92124e2f19fc98
+    - name: runes_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 6
+        y: 7
+        width: 21
+        height: 16
+      spriteId: 9139d136d7e1243c5afdc184ded2ad2f
+    - name: runes_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 8
+        y: 7
+        width: 15
+        height: 20
+      spriteId: 454184da656444da3b45e63104674b12
+    - name: runes_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 7
+        y: 6
+        width: 17
+        height: 19
+      spriteId: ff3b38b7575c0469e9060b32f2217893
+    - name: runes_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: 9bc36ff464740485db60726fb1aac28c
+    - name: runes_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 7
+        y: 4
+        width: 17
+        height: 24
+      spriteId: a1336faa576ce4dc4b1d49628c325804
+    - name: runes_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: c46808ac82bda4134a7f642c307b6c8d
+    - name: runes_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 8
+        y: 5
+        width: 16
+        height: 22
+      spriteId: a705a60783d454eb6a371ff19f86ad68
+    - name: runes_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 7
+        y: 6
+        width: 16
+        height: 19
+      spriteId: 5a270887015b44a24a8dc7f433066d08
+    - name: runes_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 6
+        y: 7
+        width: 21
+        height: 16
+      spriteId: 49badc227aa3d42eea191407158eb8b9
+    - name: runes_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 8
+        y: 7
+        width: 15
+        height: 20
+      spriteId: 6c1564523ff0c46d1a7a4c69a5665669
+    - name: runes_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 7
+        y: 6
+        width: 17
+        height: 19
+      spriteId: 4457b5629039e4e99b450ff75b68cac6
+    - name: runes_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: bd8e650d32bb4473dbdf7a7b5e3c1cfe
+    - name: runes_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 7
+        y: 4
+        width: 17
+        height: 24
+      spriteId: d954bfb5195dd4efea0f41fc008466b8
+    - name: runes_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: 00649352b56a849fbada99cd475880c4
+    - name: runes_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 8
+        y: 5
+        width: 16
+        height: 22
+      spriteId: dd9e2c98ee55a48c59ef359ac2c1b0ac
+    - name: runes_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 7
+        y: 6
+        width: 16
+        height: 19
+      spriteId: 59825fd134afc48e78e919ebb28bc12c
+    - name: runes_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 6
+        y: 7
+        width: 21
+        height: 16
+      spriteId: 3bc439efe6efb4895ba471e0b386c437
+    - name: runes_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 8
+        y: 7
+        width: 15
+        height: 20
+      spriteId: 9df9e2c87efab4c72baafce94a06aa48
+    - name: runes_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 7
+        y: 6
+        width: 17
+        height: 19
+      spriteId: 1d26b966eb22643da922131702f49310
+    - name: runes_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: 9eb4ffeeedb9c4294bd36ce6635f02f2
+    - name: runes_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 7
+        y: 7
+        width: 18
+        height: 19
+      spriteId: c0628776ebded4fe1ad8f657ff2d13ed
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}
