@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private PlayerStats playerStats;
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer renderer;
     private bool _isMoving = false;
     private bool _isJumping = false;
     private bool _isFalling = false;
@@ -17,9 +18,10 @@ public class PlayerController : MonoBehaviour
     
     private void Awake()
     {
+        playerStats = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        playerStats = GetComponent<PlayerStats>();
+        renderer = GetComponent<SpriteRenderer>();
     }
     
     private void FixedUpdate()
@@ -91,15 +93,15 @@ public class PlayerController : MonoBehaviour
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if (moveInput.x > 0 && !IsFacingRight)
+        if (moveInput.x > 0)
         {
             //face the right
-            IsFacingRight = true;
+            renderer.flipX = false;
         }
-        else if (moveInput.x < 0 && IsFacingRight)
+        else if (moveInput.x < 0)
         {
             //face the left
-            IsFacingRight = false;
+            renderer.flipX = true;
         }
     }
     
@@ -140,20 +142,6 @@ public class PlayerController : MonoBehaviour
         {
             _isSittingDown = value;
             animator.SetBool("isSitting", value);
-        }
-    }
-    
-    public bool IsFacingRight
-    {
-        get => _isFacingRight;
-        set
-        {
-            if (_isFacingRight != value)
-            {
-                transform.localScale *= new Vector2(-1, 1);
-            }
-            
-            _isFacingRight = value;
         }
     }
 }
