@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour
         if (0 < _currentHealth)
         {
             _currentHealth -= damage;
+            _animator.SetTrigger("Hit");
             if (_currentHealth <= 0)
             {
                 Death();
