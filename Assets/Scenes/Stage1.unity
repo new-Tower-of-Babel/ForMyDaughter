@@ -3032,7 +3032,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 823018309695463188, guid: 9a85d9648f7ac704caecf0a1ed88f8de, type: 2}
   m_audioClip: {fileID: 8300000, guid: f469d67263688a947bee0c8e5fbca78a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.75
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -20665,6 +20665,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d01da45761c48bea8de3236a136ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCollider: {fileID: 0}
+  footstepClips: []
+  footstepThreshold: 0
+  footstepRate: 0
 --- !u!212 &4070395345954613241
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20777,6 +20781,7 @@ MonoBehaviour:
   _currentHealth: 0
   runSpeed: 8
   jumpForce: 13
+  damage: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
