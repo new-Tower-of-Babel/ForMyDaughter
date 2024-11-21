@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         CheckIfLanded();
         CheckFallBelowMap();
-        if (Mathf.Abs(rb.velocity.magnitude) > footstepThreshold)
+        if (Mathf.Abs(rb.velocity.magnitude) > footstepThreshold && CheckIfGrounded())
         {
             if (Time.time - footstepTime > footstepRate)
             {
@@ -107,8 +107,9 @@ public class PlayerController : MonoBehaviour
 
     private bool CheckIfGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f);
-        return hit.collider != null && hit.collider.gameObject.GetComponent<Renderer>().sortingLayerName == "Ground";
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
+        bool isGrounded = hit.collider != null && hit.collider.gameObject.GetComponent<Renderer>().sortingLayerName == "Ground";
+        return isGrounded;
     }
 
     private void CheckFallBelowMap()
