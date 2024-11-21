@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Collider2D attackCollider;
+    private Transform attackTransform;
     private Vector2 moveInput;
     private PlayerStats playerStats;
     private Rigidbody2D rb;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+        attackTransform = attackCollider.transform.parent;
     }
     
     private void FixedUpdate()
@@ -126,14 +128,14 @@ public class PlayerController : MonoBehaviour
         {
             //face the right
             renderer.flipX = false;
+            attackTransform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (moveInput.x < 0)
         {
             //face the left
             renderer.flipX = true;
+            attackTransform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        
-        attackCollider.offset = new Vector2(Mathf.Abs(attackCollider.offset.x) * (_isFacingRight ? 1: -1), attackCollider.offset.y);
     }
     
     public bool IsMoving
