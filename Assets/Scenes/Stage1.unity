@@ -20665,6 +20665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d01da45761c48bea8de3236a136ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallThreshold: -10
   attackCollider: {fileID: 0}
   footstepClips: []
   footstepThreshold: 0

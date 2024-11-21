@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private float fallThreshold = -10f;
     [SerializeField] private Collider2D attackCollider;
     private Transform attackTransform;
     private Vector2 moveInput;
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         CheckIfFalling();
         CheckIfLanded();
+        CheckFallBelowMap();
         if (Mathf.Abs(rb.velocity.magnitude) > footstepThreshold)
         {
             if (Time.time - footstepTime > footstepRate)
@@ -119,6 +121,14 @@ public class PlayerController : MonoBehaviour
         {
             IsJumping = false;
             IsFalling = false;
+        }
+    }
+
+    private void CheckFallBelowMap()
+    {
+        if (transform.position.y < fallThreshold)
+        {
+            playerStats.Death();
         }
     }
 

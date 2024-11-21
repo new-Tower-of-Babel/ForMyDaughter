@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -50,9 +51,10 @@ public class PlayerStats : MonoBehaviour
         }
     }
     
-    void Death()
+    public void Death()
     {
         _animator.SetTrigger("death");
-        // Invoke("GameOver", 1.5f);
+        Destroy(this.gameObject, 1.5f);
+        SceneManager.LoadScene("StoryScene");
     }
 }
