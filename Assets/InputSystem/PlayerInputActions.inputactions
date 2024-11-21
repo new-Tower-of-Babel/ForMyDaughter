@@ -24,15 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Sit",
-                    "type": "Button",
-                    "id": "5487a406-d7fc-49e1-bb11-69e0ba7abc7b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "6c4bc8f8-6e3f-4a34-8d54-6d7fde15e042",
@@ -97,17 +88,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "09b1d9f0-5299-454e-b6ba-a74b6d3fe209",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Player",
-                    "action": "Sit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float fallThreshold = -10f;
+    [SerializeField] private float fallThreshold = -40f;
     [SerializeField] private Collider2D attackCollider;
     private Transform attackTransform;
     private Vector2 moveInput;
@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        CheckIfFalling();
         CheckIfLanded();
         CheckFallBelowMap();
         if (Mathf.Abs(rb.velocity.magnitude) > footstepThreshold)
@@ -66,20 +65,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, playerStats.jumpForce);
             IsJumping = true;
-            _isFalling = false;
-        }
-    }
-
-    public void OnSit(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            IsSittingDown = true;
-            IsMoving = false;
-        }
-        else if (context.canceled)
-        {
-            IsSittingDown = false;
         }
     }
     
@@ -105,23 +90,25 @@ public class PlayerController : MonoBehaviour
         {
             other.GetComponent<Thing>().Hit(playerStats.damage);
         }
-    }
 
-    private void CheckIfFalling()
-    {
-        if (rb.velocity.y < 0 && !IsJumping)
+        if (other.CompareTag("Boss"))
         {
-            IsFalling = true;
+            playerStats.Death();
         }
     }
     
     private void CheckIfLanded()
     {
-        if ((IsJumping || IsFalling) && rb.velocity.y == 0)
+        if (IsJumping && Mathf.Approximately(rb.velocity.y, 0f))
         {
             IsJumping = false;
-            IsFalling = false;
         }
+    }
+
+    private bool CheckIfGrounded()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f);
+        return hit.collider != null && hit.collider.gameObject.GetComponent<Renderer>().sortingLayerName == "Ground";
     }
 
     private void CheckFallBelowMap()
@@ -165,26 +152,6 @@ public class PlayerController : MonoBehaviour
         {
             _isJumping = value;
             animator.SetBool("isJumping", value);
-        }
-    }
-
-    public bool IsFalling
-    {
-        get => _isFalling;
-        set
-        {
-            _isFalling = value;
-            animator.SetBool("isFalling", value);
-        }
-    }
-
-    public bool IsSittingDown
-    {
-        get => _isSittingDown;
-        set
-        {
-            _isSittingDown = value;
-            animator.SetBool("isSitting", value);
         }
     }
 }

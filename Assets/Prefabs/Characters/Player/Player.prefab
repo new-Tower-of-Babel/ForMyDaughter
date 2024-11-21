@@ -587,6 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d01da45761c48bea8de3236a136ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallThreshold: -40
   attackCollider: {fileID: 5915924868128779729}
   footstepClips:
   - {fileID: 8300000, guid: 7a1ca87fc8b38af43bd269e557438cf3, type: 3}
@@ -614,5 +615,5 @@ MonoBehaviour:
   _maxHealth: 100
   _currentHealth: 0
   runSpeed: 8
-  jumpForce: 10
+  jumpForce: 13
   damage: 10

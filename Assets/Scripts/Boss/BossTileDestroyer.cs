@@ -1,20 +1,22 @@
+using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class BossTileDestroyer : MonoBehaviour
 {
-    public Tilemap tilemap; // Å¸ÀÏ¸Ê ÂüÁ¶
-    public GameObject destructionEffect; // ÆÄ±« È¿°ú
-    public AudioClip destructionSound; // ÆÄ±« »ç¿îµå
+    public Tilemap tilemap; // Å¸ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public GameObject destructionEffect; // ï¿½Ä±ï¿½ È¿ï¿½ï¿½
+    public AudioClip destructionSound; // ï¿½Ä±ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-    private Collider2D bossCollider; // º¸½ºÀÇ Collider2D
+    private Collider2D bossCollider; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Collider2D
+    private PlayerStats playerStats;
 
     private void Start()
     {
         bossCollider = GetComponent<Collider2D>();
         if (bossCollider == null)
         {
-            Debug.LogError("Collider2D°¡ º¸½º ¿ÀºêÁ§Æ®¿¡ ÇÊ¿äÇÕ´Ï´Ù!");
+            Debug.LogError("Collider2Dï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½Õ´Ï´ï¿½!");
         }
     }
 
@@ -22,21 +24,29 @@ public class BossTileDestroyer : MonoBehaviour
     {
         if (tilemap != null && bossCollider != null)
         {
-            // Collider2DÀÇ bounds¸¦ »ç¿ëÇØ ¿µ¿ª °è»ê
+            // Collider2Dï¿½ï¿½ boundsï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             Bounds bounds = bossCollider.bounds;
 
-            // Collider ¿µ¿ª ³» ¸ðµç Å¸ÀÏ Á¦°Å
+            // Collider ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             RemoveTilesInArea(bounds);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (playerStats != null && other.collider.CompareTag("Player"))
+        {
+            playerStats.Death();
         }
     }
 
     private void RemoveTilesInArea(Bounds bounds)
     {
-        // BoundsÀÇ ÃÖ¼Ò ¹× ÃÖ´ë À§Ä¡¸¦ ±âÁØÀ¸·Î Å¸ÀÏ¸Ê ÁÂÇ¥ °è»ê
+        // Boundsï¿½ï¿½ ï¿½Ö¼ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½Ï¸ï¿½ ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½
         Vector3Int minCell = tilemap.WorldToCell(bounds.min);
         Vector3Int maxCell = tilemap.WorldToCell(bounds.max);
 
-        // ¿µ¿ª ³» ¸ðµç Å¸ÀÏ Á¦°Å
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         for (int x = minCell.x; x <= maxCell.x; x++)
         {
             for (int y = minCell.y; y <= maxCell.y; y++)
@@ -45,16 +55,16 @@ public class BossTileDestroyer : MonoBehaviour
 
                 if (tilemap.HasTile(cellPosition))
                 {
-                    // ÆÄ±« È¿°ú »ý¼º
+                    // ï¿½Ä±ï¿½ È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                     if (destructionEffect != null)
                     {
                         Instantiate(destructionEffect, tilemap.GetCellCenterWorld(cellPosition), Quaternion.identity);
                     }
 
-                    // Å¸ÀÏ Á¦°Å
+                    // Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                     tilemap.SetTile(cellPosition, null);
 
-                    // ÆÄ±« »ç¿îµå Àç»ý
+                    // ï¿½Ä±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
                     if (destructionSound != null)
                     {
                         AudioSource.PlayClipAtPoint(destructionSound, tilemap.GetCellCenterWorld(cellPosition));
