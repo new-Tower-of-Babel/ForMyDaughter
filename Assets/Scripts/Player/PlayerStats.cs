@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float _currentHealth;
     public float runSpeed = 8f;
     public float jumpForce = 10f;
+    public float damage = 10f;
     private Animator _animator;
 
     public float MaxHealth
@@ -31,7 +32,7 @@ public class PlayerStats : MonoBehaviour
         if (0 < _currentHealth)
         {
             _currentHealth -= damage;
-            _animator.SetTrigger("Hit");
+            _animator.SetTrigger("hit");
             if (_currentHealth <= 0)
             {
                 Death();
@@ -40,7 +41,7 @@ public class PlayerStats : MonoBehaviour
     }
     void Death()
     {
-        _animator.SetTrigger("Death");
+        _animator.SetTrigger("death");
         // Invoke("GameOver", 1.5f);
     }
 }
