@@ -72,7 +72,7 @@ public class SceneChanger : MonoBehaviour
         if (currentScene == "StoryScene") nextScene = "Stage1";
         else if (currentScene == "Stage1") nextScene = "Stage2";
         else if (currentScene == "Stage2") nextScene = "Stage3";
-        else if (currentScene == "Stage3") nextScene = "TitleScene";
+        else if (currentScene == "Stage3") nextScene = "StoryScene";
 
         LoadSceneWithFade(nextScene);
     }
