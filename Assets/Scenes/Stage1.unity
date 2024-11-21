@@ -8050,7 +8050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 1978655677}
-  parallaxSpeed: 0.1
+  parallaxSpeed: 0.3
 --- !u!1 &1424191935
 GameObject:
   m_ObjectHideFlags: 0
@@ -20455,6 +20455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  _currentHealth: 0
   runSpeed: 8
   jumpForce: 13
 --- !u!1660057539 &9223372036854775807
