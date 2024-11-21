@@ -86,7 +86,7 @@ public class StorySceneManager : MonoBehaviour
                     break;
                 case 3:
                     image.GetComponent<Image>().sprite = Resources.Load<Sprite>($"1-4 consultation with a doctor");
-                    text.GetComponent<TextMeshProUGUI>().text = "Perhaps because of that sorrow, the girl also fell ill.";
+                    text.GetComponent<TextMeshProUGUI>().text = "The knight, who was the girl's father, sought out a doctor to cure her illness, and the doctor told him about the necessary herbs.";
                     break;
                 default:
                     SceneManager.LoadScene("Stage1");

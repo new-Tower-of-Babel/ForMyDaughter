@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
@@ -107,8 +108,13 @@ public class PlayerController : MonoBehaviour
 
     private bool CheckIfGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
-        bool isGrounded = hit.collider != null && hit.collider.gameObject.GetComponent<Renderer>().sortingLayerName == "Ground";
+        Collider2D collider = GetComponent<Collider2D>();
+        int groundLayerMask = LayerMask.GetMask("Platform");
+        float halfHeight = collider.bounds.size.y / 2f;
+        Vector2 origin = new Vector2(transform.position.x, transform.position.y - halfHeight);
+
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, 0.5f, groundLayerMask);
+        bool isGrounded = hit.collider != null && hit.collider.gameObject.GetComponent<TilemapRenderer>().sortingLayerName == "Ground";
         return isGrounded;
     }
 
