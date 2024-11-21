@@ -1,29 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class EnemyMove : MonoBehaviour
 {
     Rigidbody2D rigid;
     Animator anim;
-    public int nextMove; // 방향 (-1, 1)
-    public float moveSpeed = 2f; // 이동 속도
     SpriteRenderer spriteRenderer;
+    EnemyStats stats;
+
+    public int nextMove; // 방향 (-1, 1)
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        stats = GetComponent<EnemyStats>();
 
-        // 초기 Think 호출
         Invoke("Think", 5);
     }
 
     private void FixedUpdate()
     {
         // Move
-        rigid.velocity = new Vector2(nextMove * moveSpeed, rigid.velocity.y);
+        rigid.velocity = new Vector2(nextMove * stats.MoveSpeed, rigid.velocity.y);
 
         // Raycast로 앞쪽 발판 확인
         Vector2 frontVec = new Vector2(rigid.position.x + nextMove * 0.5f, rigid.position.y);
@@ -31,9 +31,8 @@ public class EnemyMove : MonoBehaviour
 
         if (rayHit.collider == null)
         {
-            // 방향 전환
             nextMove *= -1;
-            spriteRenderer.flipX = nextMove == -1; // 스프라이트 뒤집기
+            spriteRenderer.flipX = nextMove == -1;
             CancelInvoke();
             Invoke("Think", 5);
         }
@@ -41,18 +40,10 @@ public class EnemyMove : MonoBehaviour
 
     void Think()
     {
-        // 랜덤 방향 설정 (-1 또는 1)
         nextMove = Random.Range(0, 2) == 0 ? -1 : 1;
-
-        // 랜덤 속도 설정 (1f ~ 3f 사이)
-        moveSpeed = Random.Range(1f, 3f); // 원하는 속도 범위 지정
-
-        // 애니메이션 및 스프라이트 방향 설정
+        stats.MoveSpeed = Random.Range(1f, 3f); // EnemyStats의 MoveSpeed 업데이트
         anim.SetInteger("WalkSpeed", Mathf.Abs(nextMove));
         spriteRenderer.flipX = nextMove == -1;
-
-        // 다음 Think 호출 시간 설정
-        float nextThinkTime = Random.Range(2f, 5f);
-        Invoke("Think", nextThinkTime);
+        Invoke("Think", Random.Range(2f, 5f));
     }
 }
