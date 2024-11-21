@@ -36,7 +36,7 @@ public class Stage1_BackGround : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"배경 오브젝트 '{backGrounds[i].name}'에 Renderer가 없습니다.");
+                //Debug.LogError($"배경 오브젝트 '{backGrounds[i].name}'에 Renderer가 없습니다.");
             }
         }
         CalculateMoveSpeedByLayer(backGrounds, backGroundCount);

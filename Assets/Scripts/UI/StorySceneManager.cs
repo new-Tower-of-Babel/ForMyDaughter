@@ -12,9 +12,9 @@ public class StorySceneManager : MonoBehaviour
 
     private GameObject text;
 
-    private int firstStoryCount = 0;
+    public static int firstStoryCount = 0;
 
-    private int fullStoryCount = 4;
+    public static int fullStoryCount = 4;
     //front.GetComponent<Image>().sprite = Resources.Load<Sprite>($"KiHyeok{idx - (type * 2) + 1}");
 
     private void Awake()
