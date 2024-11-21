@@ -508,6 +508,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051d5b87c31891140a99685b2a46d2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successBGM: {fileID: 8300000, guid: 6207b990e550fd24ba9ec1ba2c0ae960, type: 3}
+  failureBGM: {fileID: 8300000, guid: c1f6ba7515923a346b2f70e40024c3e0, type: 3}
+  audioSource: {fileID: 0}
+  bgmMixerGroup: {fileID: 823018309695463188, guid: 9a85d9648f7ac704caecf0a1ed88f8de, type: 2}
+  audioMixerController: {fileID: 0}
 --- !u!1 &988883037
 GameObject:
   m_ObjectHideFlags: 0

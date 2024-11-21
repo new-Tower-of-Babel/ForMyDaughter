@@ -49,9 +49,9 @@ public class AudioMixerController : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private void LoadVolumeSettings()
+    public void LoadVolumeSettings()
     {
-        float masterVolume = PlayerPrefs.GetFloat(MasterVolumeKey, 1f); // ±âº»°ª 0.5
+        float masterVolume = PlayerPrefs.GetFloat(MasterVolumeKey, 1f); // ï¿½âº»ï¿½ï¿½ 0.5
         float bgmVolume = PlayerPrefs.GetFloat(BGMVolumeKey, 1f);
         float sfxVolume = PlayerPrefs.GetFloat(SFXVolumeKey, 1f);
 

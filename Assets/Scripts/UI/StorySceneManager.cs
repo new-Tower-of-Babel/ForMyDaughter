@@ -3,11 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StorySceneManager : MonoBehaviour
 {
+    [SerializeField] private AudioClip successBGM;
+    [SerializeField] private AudioClip failureBGM;
+    [SerializeField] private AudioSource audioSource;	// bgm재생용
+    [SerializeField] private AudioMixerGroup bgmMixerGroup;
+    
+    
     private GameObject image;
 
     private GameObject text;
@@ -15,12 +22,17 @@ public class StorySceneManager : MonoBehaviour
     public static int firstStoryCount = 0;
 
     public static int fullStoryCount = 4;
-    //front.GetComponent<Image>().sprite = Resources.Load<Sprite>($"KiHyeok{idx - (type * 2) + 1}");
 
     private void Awake()
     {
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            
+        }
         image = GameObject.Find("Image");
         text = GameObject.Find("Text");
+        audioSource.outputAudioMixerGroup = bgmMixerGroup;
     }
 
     private void Start()
@@ -36,13 +48,24 @@ public class StorySceneManager : MonoBehaviour
             text.GetComponent<TextMeshProUGUI>().text = "There was a family living happily in a village.";
         }else if (firstStoryCount == fullStoryCount && !Finish.AllClearCheck)
         {
+            PlayBGM(failureBGM);
             image.GetComponent<Image>().sprite = Resources.Load<Sprite>($"fail");
             text.GetComponent<TextMeshProUGUI>().text = "As you collapsed in the forest, the girl, who had been suffering from her illness, passed away.";
         }else if (firstStoryCount == fullStoryCount &&Finish.AllClearCheck)
         {
+            PlayBGM(successBGM);
             image.GetComponent<Image>().sprite = Resources.Load<Sprite>($"clear");
             text.GetComponent<TextMeshProUGUI>().text = "When you safely returned with the herbs, the doctor used them to cure the girl's illness, and you lived happily with her.";
         }
+    }
+    private void PlayBGM(AudioClip clip)
+    {
+        if (clip == null)
+        {
+            return;
+        }
+        audioSource.clip = clip;
+        audioSource.Play();
     }
     
 
