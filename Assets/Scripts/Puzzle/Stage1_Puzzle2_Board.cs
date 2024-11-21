@@ -145,7 +145,6 @@ public class Stage1_Puzzle2_Board : MonoBehaviour
         if (tiles.Count == puzzleSize.x * puzzleSize.y - 1)
         {
             clearCondition = true;
-            Debug.Log("퍼즐을 완료");
         }
     }
 }
