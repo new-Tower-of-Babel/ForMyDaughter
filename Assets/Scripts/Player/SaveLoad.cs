@@ -16,11 +16,11 @@ public class SaveLoad : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            saveFilePath = Application.persistentDataPath + "/saveData.json"; // ÃÊ±âÈ­
+            saveFilePath = Application.persistentDataPath + "/saveData.json"; // ï¿½Ê±ï¿½È­
         }
         else
         {
-            Destroy(gameObject); // Áßº¹ ¹æÁö
+            Destroy(gameObject); // ï¿½ßºï¿½ ï¿½ï¿½ï¿½ï¿½
         }
     }
 
@@ -35,37 +35,38 @@ public class SaveLoad : MonoBehaviour
         try
         {
             SaveData data = new SaveData { savedStage = stageName };
-            string json = JsonUtility.ToJson(data, true); // JSONÀ¸·Î º¯È¯
-            File.WriteAllText(saveFilePath, json); // ÆÄÀÏ¿¡ ¾²±â
-            Debug.Log($"½ºÅ×ÀÌÁö '{stageName}'ÀÌ {saveFilePath}¿¡ ÀúÀåµÇ¾ú½À´Ï´Ù.");
+            string json = JsonUtility.ToJson(data, true); // JSONï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+            File.WriteAllText(saveFilePath, json); // ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½
+            Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ '{stageName}'ï¿½ï¿½ {saveFilePath}ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
         }
         catch (IOException e)
         {
-            Debug.LogError($"½ºÅ×ÀÌÁö ÀúÀå Áß ¿À·ù ¹ß»ý: {e.Message}");
+            Debug.LogError($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½: {e.Message}");
         }
     }
 
     public string LoadSavedStage()
     {
+        StorySceneManager.firstStoryCount = StorySceneManager.fullStoryCount;
         try
         {
             if (File.Exists(saveFilePath))
             {
-                string json = File.ReadAllText(saveFilePath); // ÆÄÀÏ ÀÐ±â
-                SaveData data = JsonUtility.FromJson<SaveData>(json); // JSON ÆÄ½Ì
-                Debug.Log($"ÀúÀåµÈ ½ºÅ×ÀÌÁö '{data.savedStage}'°¡ ·ÎµåµÇ¾ú½À´Ï´Ù.");
-                return data.savedStage; // ÀúÀåµÈ ½ºÅ×ÀÌÁö ¹ÝÈ¯
+                string json = File.ReadAllText(saveFilePath); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ð±ï¿½
+                SaveData data = JsonUtility.FromJson<SaveData>(json); // JSON ï¿½Ä½ï¿½
+                Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ '{data.savedStage}'ï¿½ï¿½ ï¿½Îµï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+                return data.savedStage; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
             }
             else
             {
-                Debug.LogWarning("ÀúÀå ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê¾Æ ±âº»°ª('Stage1')À» ¹ÝÈ¯ÇÕ´Ï´Ù.");
-                return "Stage1"; // ±âº»°ª
+                Debug.LogWarning("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ ï¿½âº»ï¿½ï¿½('Stage1')ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Õ´Ï´ï¿½.");
+                return "Stage1"; // ï¿½âº»ï¿½ï¿½
             }
         }
         catch (IOException e)
         {
-            Debug.LogError($"½ºÅ×ÀÌÁö ·Îµå Áß ¿À·ù ¹ß»ý: {e.Message}");
-            return "Stage1"; // ±âº»°ª
+            Debug.LogError($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½: {e.Message}");
+            return "Stage1"; // ï¿½âº»ï¿½ï¿½
         }
     }
 }

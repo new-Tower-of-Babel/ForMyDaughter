@@ -1,15 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Stage1_Puzzle1_GoalBoxCheck : MonoBehaviour
+public class Stage2Enter : MonoBehaviour
 {
-    public bool goalCheck = false;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        goalCheck = true;
+        SceneManager.LoadScene("Stage2");
     }
 }
