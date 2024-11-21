@@ -11,49 +11,57 @@ public class SceneChanger : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 1.5f;
 
-    private static SceneChanger instance;
+    //private static SceneChanger instance;
+    private SaveLoad saveLoad;
 
     private void Awake()
     {
-        if (instance == null)
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(gameObject);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
+        if (FindObjectOfType<SaveLoad>() != null)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            saveLoad = FindObjectOfType<SaveLoad>();
         }
         else
         {
-            Destroy(gameObject);
+            Debug.LogError("SaveLoad.cs가 씬에 없습니다!");
         }
     }
 
     public void StartButton()
     {
-        //if (scene != null)
-        //{
-        //SceneManager.LoadScene("stage1");
-        LoadSceneWithFade("stage1");
-        //}
+        LoadSceneWithFade("StoryScene");
     }
 
     public void LoadGame()
     {
-        string savedStage = PlayerPrefs.GetString("SavedStage", "Stage1");
-        //SceneManager.LoadScene(savedStage);
-        LoadSceneWithFade(savedStage);
+        if (saveLoad != null)
+        {
+            string savedStage = saveLoad.LoadSavedStage();
+            LoadSceneWithFade(savedStage);
+        }
+        else
+        {
+            Debug.LogError("SaveLoad 인스턴스를 찾을 수 없습니다");
+        }
     }
 
     public void GoToTitle()
     {
-        SaveGame();
-        //SceneManager.LoadScene("TitleScene");
-        LoadSceneWithFade("TitleScene");
-    }
+        if (saveLoad != null)
+        {
+            string currentScene = SceneManager.GetActiveScene().name;
+            saveLoad.SaveCurrentStage(currentScene);
+        }
 
-    private void SaveGame()
-    {
-        string currentScene = SceneManager.GetActiveScene().name;
-        PlayerPrefs.SetString("SavedStage", currentScene);
-        PlayerPrefs.Save();
+        LoadSceneWithFade("TitleScene");
     }
 
     public void NextStage()
@@ -61,17 +69,18 @@ public class SceneChanger : MonoBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
         string nextScene = "";
 
-        if (currentScene == "Stage1") nextScene = "Stage2";
+        if (currentScene == "StoryScene") nextScene = "Stage1";
+        else if (currentScene == "Stage1") nextScene = "Stage2";
         else if (currentScene == "Stage2") nextScene = "Stage3";
         else if (currentScene == "Stage3") nextScene = "TitleScene";
 
-        //SceneManager.LoadScene(nextScene);
         LoadSceneWithFade(nextScene);
     }
     
     public void LoadSceneWithFade(string scene)
     {
-        StartCoroutine(FadeOutAndLoadScene(scene));
+        SceneManager.LoadScene(scene);
+        //StartCoroutine(FadeOutAndLoadScene(scene));
     }
 
     private IEnumerator FadeOutAndLoadScene(string sceneName)

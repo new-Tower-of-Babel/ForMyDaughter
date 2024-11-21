@@ -62,9 +62,27 @@ public class UIManager : MonoBehaviour
 
     public void QuitToMainMenu()
     {
+        SaveCurrentScene();
         // 메인 메뉴로 이동
         SceneManager.LoadScene("TitleScene");
         Time.timeScale = 1f; // 시간 초기화
+    }
+
+    private void SaveCurrentScene()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        // SaveLoad의 SaveStage 메서드 호출
+        SaveLoad saveLoad = FindObjectOfType<SaveLoad>();
+        if (saveLoad != null)
+        {
+            saveLoad.SaveCurrentStage(currentScene); // 현재 씬 저장
+            Debug.Log($"현재 씬 '{currentScene}'이 저장되었습니다.");
+        }
+        else
+        {
+            Debug.LogError("SaveLoad 스크립트를 찾을 수 없습니다. 저장 실패.");
+        }
     }
 
     private void OnDestroy()

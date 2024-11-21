@@ -3,12 +3,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    [SerializeField] private Collider2D attackCollider;
     private Vector2 moveInput;
     private PlayerStats playerStats;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer renderer;
+    public AudioClip[] footstepClips;
+    private AudioSource audioSource;
+    public float footstepThreshold;
+    public float footstepRate;
+    private float footstepTime;
     private bool _isMoving = false;
     private bool _isJumping = false;
     private bool _isFalling = false;
@@ -22,6 +27,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
     
     private void FixedUpdate()
@@ -33,6 +39,14 @@ public class PlayerController : MonoBehaviour
     {
         CheckIfFalling();
         CheckIfLanded();
+        if (Mathf.Abs(rb.velocity.magnitude) > footstepThreshold)
+        {
+            if (Time.time - footstepTime > footstepRate)
+            {
+                footstepTime = Time.time;
+                audioSource.PlayOneShot(footstepClips[Random.Range(0, footstepClips.Length)]);
+            }
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -67,10 +81,25 @@ public class PlayerController : MonoBehaviour
     
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed && !_isAttacking)
+        if (context.performed)
         {
             _isAttacking = true;
             animator.SetTrigger("attack");
+            attackCollider.enabled = true;
+        }
+    }
+    
+    public void EndAttack()
+    {
+        _isAttacking = false;
+        attackCollider.enabled = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (_isAttacking && other.CompareTag("Enemy"))
+        {
+            other.GetComponent<Thing>().Hit(playerStats.damage);
         }
     }
 
@@ -103,6 +132,8 @@ public class PlayerController : MonoBehaviour
             //face the left
             renderer.flipX = true;
         }
+        
+        attackCollider.offset = new Vector2(Mathf.Abs(attackCollider.offset.x) * (_isFacingRight ? 1: -1), attackCollider.offset.y);
     }
     
     public bool IsMoving
