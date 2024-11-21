@@ -66,7 +66,7 @@ public class Thing : MonoBehaviour
         if (0 < health)
         {
             health -= damage;
-            ChangeColorOnHit();
+            StartCoroutine(ChangeColorOnHit());
             if (health <= 0)
             {
                 Death();
@@ -76,14 +76,15 @@ public class Thing : MonoBehaviour
 
     private IEnumerator ChangeColorOnHit()
     {
+        Color originalColor = renderer.color;
         renderer.color = Color.red;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         renderer.color = originalColor;
     }
     
     void Death()
     {
         _animator.SetTrigger("death");
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject, 1f);
     }
 }

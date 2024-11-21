@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
     public void EndAttack()
     {
         _isAttacking = false;
-        attackCollider.enabled = true;
+        attackCollider.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
