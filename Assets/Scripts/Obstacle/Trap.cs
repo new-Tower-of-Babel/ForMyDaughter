@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    public float damagePerSecond;
+    public float damagePerSecond = 10f;
     private bool isDamaging = false;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !isDamaging)
         {
-            //StartCoroutine(ApplyDamage(other));
+            StartCoroutine(ApplyDamage(other));
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -23,21 +23,22 @@ public class Trap : MonoBehaviour
             isDamaging = false;
         }
     }
-/*
-    private IEnumerator ApplyDamage(Collider player)
+
+    private IEnumerator ApplyDamage(Collider2D player)
     {
         isDamaging = true;
-        
+
+        PlayerStats playerStats = player.GetComponent<PlayerStats>();
+        if (playerStats == null)
+        {
+            yield break;
+        }
+
         while (isDamaging)
         {
-            PlayerInfo playerInfo = player.GetComponent<PlayerInfo>(); // PlayerInfo 스크립트가 있다고 가정
-            if (playerInfo != null)
-            {
-                playerInfo.health -= damagePerSecond;
-            }
-
+            playerStats.Hit(damagePerSecond);
             yield return new WaitForSeconds(1f); // 1초 간격으로 데미지 적용
         }
     }
-*/
+
 }

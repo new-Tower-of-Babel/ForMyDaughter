@@ -77,6 +77,7 @@ public class SceneChanger : MonoBehaviour
     private IEnumerator FadeOutAndLoadScene(string sceneName)
     {
         float elapsedTime = 0f;
+        fadeImage.color = new Color(0, 0, 0, 0);
         Color color = fadeImage.color;
 
         // 페이드 아웃 효과
