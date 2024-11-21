@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
+    public static bool AllClearCheck = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // ÇÃ·¹ÀÌ¾î°¡ µµÂøÇß´ÂÁö È®ÀÎ
+        AllClearCheck = true;
+        if (other.CompareTag("Player")) // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ß´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         {
-            GameManager.Instance.FinishGame(); // °ÔÀÓ Á¾·á Ã³¸®
+            GameManager.Instance.FinishGame(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
         }
     }
 }
