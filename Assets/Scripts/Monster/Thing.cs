@@ -11,10 +11,10 @@ public class Thing : MonoBehaviour
 
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector;
+    private Color originalColor;
     private SpriteRenderer renderer;
     private Animator _animator;
     private Rigidbody2D rb;
-    private Color originalColor;
     public float health = 30f;
     public float walkSpeed = 5f;
 
@@ -25,14 +25,16 @@ public class Thing : MonoBehaviour
         {
             if (_walkDirection != value)
             {
-                gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y);
-
-                if (value == WalkableDirection.Right)
+                _walkDirection = value;
+                
+                if (_walkDirection == WalkableDirection.Right)
                 {
+                    renderer.flipX = true;
                     walkDirectionVector = Vector2.right;
                 }
-                else if (value == WalkableDirection.Left)
+                else if (_walkDirection == WalkableDirection.Left)
                 {
+                    renderer.flipX = false;
                     walkDirectionVector = Vector2.left;
                 }
             }
@@ -46,19 +48,22 @@ public class Thing : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        WalkDirection = WalkableDirection.Left;
+    }
+
     private void FixedUpdate()
     {
-        // //enemy flip when touch the wall
-        //  if ()
-        //  {
-        //      renderer.flipX = false;
-        //  }
-        //  else if ()
-        //  {
-        //      renderer.flipX = true;
-        //  }
-         
-        rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+        rb.velocity = new Vector2(walkDirectionVector.x * walkSpeed, rb.velocity.y);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Renderer>().sortingLayerName == "Wall")
+        {
+            WalkDirection = (WalkDirection == WalkableDirection.Right) ? WalkableDirection.Left : WalkableDirection.Right;
+        }
     }
     
     public void Hit(float damage)
@@ -85,6 +90,6 @@ public class Thing : MonoBehaviour
     void Death()
     {
         _animator.SetTrigger("death");
-        Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject, 0.5f);
     }
 }

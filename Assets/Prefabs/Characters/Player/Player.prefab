@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 7697012816996728590}
   - component: {fileID: 5915924868128779729}
   m_Layer: 0
-  m_Name: AttackCollider
+  m_Name: SwordAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 4328666526062227488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.03, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,14 +168,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.14356995, y: 0.41323853}
-      - {x: 0.45812988, y: 0.04735565}
-      - {x: 0.51335144, y: -0.18489838}
-      - {x: 0.44394773, y: -0.83585}
-      - {x: 1.7875962, y: -1.3025588}
-      - {x: 2.1060638, y: -0.767746}
-      - {x: 2.1053634, y: -0.087280035}
-      - {x: 1.8121557, y: 0.5858001}
+    - - {x: -1.0792694, y: 0.5903969}
+      - {x: -0.6128845, y: 0.106422424}
+      - {x: -0.4810791, y: -0.2930298}
+      - {x: -0.8967505, y: -0.7511561}
+      - {x: 0.8265519, y: -1.33823}
+      - {x: 1.1413116, y: -0.6871147}
+      - {x: 1.0934005, y: 0.040546656}
+      - {x: 0.68555355, y: 0.8794479}
   m_UseDelaunayMesh: 0
 --- !u!1 &5745914780544985144
 GameObject:

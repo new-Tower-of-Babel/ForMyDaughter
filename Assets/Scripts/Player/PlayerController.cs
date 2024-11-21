@@ -126,14 +126,14 @@ public class PlayerController : MonoBehaviour
         {
             //face the right
             renderer.flipX = false;
-            attackCollider.offset = new Vector2(Mathf.Abs(attackCollider.offset.x), attackCollider.offset.y);
         }
         else if (moveInput.x < 0)
         {
             //face the left
             renderer.flipX = true;
-            attackCollider.offset = new Vector2(-Mathf.Abs(attackCollider.offset.x), attackCollider.offset.y);
         }
+        
+        attackCollider.offset = new Vector2(Mathf.Abs(attackCollider.offset.x) * (_isFacingRight ? 1: -1), attackCollider.offset.y);
     }
     
     public bool IsMoving
