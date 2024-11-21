@@ -27,6 +27,16 @@ public class PlayerStats : MonoBehaviour
         _currentHealth = _maxHealth;
     }
 
+    public void Heal(int healthRestore)
+    {
+        _currentHealth += healthRestore;
+
+        if (_currentHealth >= _maxHealth)
+        {
+            _currentHealth = _maxHealth;
+        }
+    }
+
     public void Hit(float damage)
     {
         if (0 < _currentHealth)
@@ -39,6 +49,7 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
+    
     void Death()
     {
         _animator.SetTrigger("death");
