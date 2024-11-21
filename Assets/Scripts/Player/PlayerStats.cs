@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float _maxHealth = 100f;
-    private float _currentHealth;
+    [SerializeField] private float _currentHealth;
     public float runSpeed = 8f;
     public float jumpForce = 10f;
     private Animator _animator;
@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour
         if (0 < _currentHealth)
         {
             _currentHealth -= damage;
+            _animator.SetTrigger("Hit");
             if (_currentHealth <= 0)
             {
                 Death();
