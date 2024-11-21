@@ -19,7 +19,7 @@ public class StorySceneManager : MonoBehaviour
 
     private GameObject text;
 
-    public static int firstStoryCount = 0;
+    public static int firstStoryCount = 4;
 
     public static int fullStoryCount = 4;
 
@@ -71,7 +71,7 @@ public class StorySceneManager : MonoBehaviour
 
     public void StoryChangerBtn()
     {
-        if (firstStoryCount < fullStoryCount || !Finish.AllClearCheck)
+        if (firstStoryCount < fullStoryCount && !Finish.AllClearCheck)
         {
             firstStoryCount++;
             switch (firstStoryCount)

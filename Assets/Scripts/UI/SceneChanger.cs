@@ -31,12 +31,13 @@ public class SceneChanger : MonoBehaviour
         }
         else
         {
-            Debug.LogError("SaveLoad.cs°¡ ¾À¿¡ ¾ø½À´Ï´Ù!");
+            Debug.LogError("SaveLoad.csï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!");
         }
     }
 
     public void StartButton()
     {
+        StorySceneManager.firstStoryCount = 0;
         LoadSceneWithFade("StoryScene");
     }
 
@@ -49,7 +50,7 @@ public class SceneChanger : MonoBehaviour
         }
         else
         {
-            Debug.LogError("SaveLoad ÀÎ½ºÅÏ½º¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù");
+            Debug.LogError("SaveLoad ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½");
         }
     }
 
@@ -89,7 +90,7 @@ public class SceneChanger : MonoBehaviour
         fadeImage.color = new Color(0, 0, 0, 0);
         Color color = fadeImage.color;
 
-        // ÆäÀÌµå ¾Æ¿ô È¿°ú
+        // ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Æ¿ï¿½ È¿ï¿½ï¿½
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -100,7 +101,7 @@ public class SceneChanger : MonoBehaviour
 
         SceneManager.LoadScene(sceneName);
 
-        // ÆäÀÌµå ÀÎ È¿°ú (Optional)
+        // ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ È¿ï¿½ï¿½ (Optional)
         elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
         {

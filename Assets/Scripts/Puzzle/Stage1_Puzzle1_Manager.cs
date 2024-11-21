@@ -60,8 +60,11 @@ public class Stage1_Puzzle1_Manager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!puzzle1Btn.activeSelf)
+        {
             puzzleSign.SetActive(true);
             puzzle1PlayCondition = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
