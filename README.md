@@ -37,22 +37,24 @@
 
 ## 주요기능
 
-- 스토리
+- 스토리분기(새드/해피)
 
 
-(설명)
+  플레이어가 약초를 구하지 못하고 스테이지에서 죽을시(맵 바깥으로 떨어짐, 체력이 0 혹은 보스와 닿았을때) -> 새드엔딩
 
+  플레이어가 스테이지3에서 약초를 얻어낸다면 -> 해피엔딩
 
 - 스테이지별 난이도
 
 
-(설명)
+  스테이지1: 간단한 맵 구조, 퍼즐
 
 
-- 세이브&로드
+  스테이지2: 스테이지1보다 복잡해진 맵 구조, 몬스터와 함정이 있음
 
 
-(설명)
+  스테이지3: 다른 두 스테이지보다 훨씬 어려운 맵 구조, 플레이어의 뒤에서 쫓아오는 보스
+
 
 ## 기능설명
 
@@ -65,19 +67,16 @@
 ---
 ## 기술스택
 
-### ✔️ Language
+- Language: C#
 
 
-### ✔️ Version Control
-
-### ✔️ IDE
-
-### ✔️ Framework
-
-### ✔️ Deploy
+- Version Control: Unity 2022.3.17f1
 
 
-### ✔️  DBMS
+- IDE: Visual Studio, Rider
+
+
+- Framework: .NET SDK version 8.0.401
 
 ## 발표자료
 
@@ -90,7 +89,7 @@ WireFrame: <https://www.figma.com/board/sQMKDyOaRbR5BgYZPlXOf2/ForMyDaughter?nod
 영상: <>
 
 
-PPT: <>
+PPT: <https://www.canva.com/design/DAGXImUy2o8/ptEEqfph9xPKsySYJ8vXUw/view?utm_content=DAGXImUy2o8&utm_campaign=designshare&utm_medium=link&utm_source=editor>
 
 
 ## 라이선스
@@ -108,10 +107,10 @@ PPT: <>
 UI: <https://assetstore.unity.com/packages/2d/gui/pixel-art-menu-package-5-sets-275304>
 
 
-기타 오브젝트: <https://assetstore.unity.com/packages/2d/environments/pixel-art-platformer-village-props-166114>, <https://razielnozac.itch.io/plants-and-flowers-3264>
+기타 오브젝트: <https://assetstore.unity.com/packages/2d/environments/pixel-art-platformer-village-props-166114>, <https://razielnozac.itch.io/plants-and-flowers-3264>, <https://opengameart.org/content/potion-bottles-0>, <https://swellyxart.itch.io/rune-pack-1>, <https://opengameart.org/content/golems>
 
 
 글씨체: <https://noonnu.cc/font_page/1140>
 
 
-사운드: <>
+사운드: <https://www.youtube.com/@shkent>, <https://assetstore.unity.com/packages/audio/music/fantasy-rpg-adventure-25-tracks-181574>, <https://assetstore.unity.com/packages/audio/sound-fx/footstep-snow-and-grass-90678>
