@@ -37,6 +37,7 @@ public class StorySceneManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log($"start - {firstStoryCount}");
         StorySceneFirstImage();
     }
 
@@ -71,6 +72,7 @@ public class StorySceneManager : MonoBehaviour
 
     public void StoryChangerBtn()
     {
+        Debug.Log($"btnpush - {firstStoryCount}");
         if (firstStoryCount < fullStoryCount && !Finish.AllClearCheck)
         {
             firstStoryCount++;
