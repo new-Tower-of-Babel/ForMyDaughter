@@ -51,7 +51,7 @@ public class AudioMixerController : MonoBehaviour
 
     public void LoadVolumeSettings()
     {
-        float masterVolume = PlayerPrefs.GetFloat(MasterVolumeKey, 1f); // �⺻�� 0.5
+        float masterVolume = PlayerPrefs.GetFloat(MasterVolumeKey, 1f);
         float bgmVolume = PlayerPrefs.GetFloat(BGMVolumeKey, 1f);
         float sfxVolume = PlayerPrefs.GetFloat(SFXVolumeKey, 1f);
 
