@@ -88,7 +88,7 @@
 WireFrame: <https://www.figma.com/board/sQMKDyOaRbR5BgYZPlXOf2/ForMyDaughter?node-id=36-282&t=fFfRFROuu62ggDX8-1>
 
 
-영상: <>
+영상: <https://www.youtube.com/watch?v=wIifpNAMP6o>
 
 
 PPT: <https://www.canva.com/design/DAGXImUy2o8/ptEEqfph9xPKsySYJ8vXUw/view?utm_content=DAGXImUy2o8&utm_campaign=designshare&utm_medium=link&utm_source=editor>
