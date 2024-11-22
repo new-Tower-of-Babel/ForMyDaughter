@@ -58,14 +58,5 @@ public class AudioMixerController : MonoBehaviour
         m_MusicMasterSlider.value = masterVolume;
         m_MusicBGMSlider.value = bgmVolume;
         m_MusicSFXSlider.value = sfxVolume;
-
-        ApplyVolumeToMixer(masterVolume, bgmVolume, sfxVolume);
-    }
-    
-    private void ApplyVolumeToMixer(float masterVolume, float bgmVolume, float sfxVolume)
-    {
-        m_AudioMixer.SetFloat("Master", Mathf.Log10(masterVolume) * 20);
-        m_AudioMixer.SetFloat("BGM", Mathf.Log10(bgmVolume) * 20);
-        m_AudioMixer.SetFloat("SFX", Mathf.Log10(sfxVolume) * 20);
     }
 }

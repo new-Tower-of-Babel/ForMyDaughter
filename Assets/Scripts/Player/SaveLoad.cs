@@ -16,11 +16,11 @@ public class SaveLoad : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            saveFilePath = Application.persistentDataPath + "/saveData.json"; // �ʱ�ȭ
+            saveFilePath = Application.persistentDataPath + "/saveData.json";
         }
         else
         {
-            Destroy(gameObject); // �ߺ� ����
+            Destroy(gameObject);
         }
     }
 
@@ -35,13 +35,13 @@ public class SaveLoad : MonoBehaviour
         try
         {
             SaveData data = new SaveData { savedStage = stageName };
-            string json = JsonUtility.ToJson(data, true); // JSON���� ��ȯ
-            File.WriteAllText(saveFilePath, json); // ���Ͽ� ����
-            Debug.Log($"�������� '{stageName}'�� {saveFilePath}�� ����Ǿ����ϴ�.");
+            string json = JsonUtility.ToJson(data, true);
+            File.WriteAllText(saveFilePath, json);
+            Debug.Log($"'{stageName}' - {saveFilePath}");
         }
         catch (IOException e)
         {
-            Debug.LogError($"�������� ���� �� ���� �߻�: {e.Message}");
+            Debug.LogError($"Stage Save Error: {e.Message}");
         }
     }
 
@@ -51,21 +51,20 @@ public class SaveLoad : MonoBehaviour
         {
             if (File.Exists(saveFilePath))
             {
-                string json = File.ReadAllText(saveFilePath); // ���� �б�
-                SaveData data = JsonUtility.FromJson<SaveData>(json); // JSON �Ľ�
-                Debug.Log($"����� �������� '{data.savedStage}'�� �ε�Ǿ����ϴ�.");
-                return data.savedStage; // ����� �������� ��ȯ
+                string json = File.ReadAllText(saveFilePath);
+                SaveData data = JsonUtility.FromJson<SaveData>(json);
+                Debug.Log($"'{data.savedStage}' Load");
+                return data.savedStage;
             }
             else
             {
-                Debug.LogWarning("���� ������ �������� �ʾ� �⺻��('Stage1')�� ��ȯ�մϴ�.");
-                return "Stage1"; // �⺻��
+                return "Stage1";
             }
         }
         catch (IOException e)
         {
-            Debug.LogError($"�������� �ε� �� ���� �߻�: {e.Message}");
-            return "Stage1"; // �⺻��
+            Debug.LogError($"Stage Load Error: {e.Message}");
+            return "Stage1";
         }
     }
 }
