@@ -47,7 +47,6 @@ public class SaveLoad : MonoBehaviour
 
     public string LoadSavedStage()
     {
-        StorySceneManager.firstStoryCount = StorySceneManager.fullStoryCount;
         try
         {
             if (File.Exists(saveFilePath))
