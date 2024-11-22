@@ -37,7 +37,7 @@ public class Trap : MonoBehaviour
         while (isDamaging)
         {
             playerStats.Hit(damagePerSecond);
-            yield return new WaitForSeconds(1f); // 1초 간격으로 데미지 적용
+            yield return new WaitForSeconds(1f);
         }
     }
 

@@ -7,31 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    //public SceneAsset scene;
     public Image fadeImage;
     public float fadeDuration = 1.5f;
 
-    //private static SceneChanger instance;
     private SaveLoad saveLoad;
 
     private void Awake()
     {
-        //if (instance == null)
-        //{
-        //    instance = this;
-        //    DontDestroyOnLoad(gameObject);
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //}
         if (FindObjectOfType<SaveLoad>() != null)
         {
             saveLoad = FindObjectOfType<SaveLoad>();
-        }
-        else
-        {
-            Debug.LogError("SaveLoad.cs�� ���� �����ϴ�!");
         }
     }
 
@@ -50,7 +35,7 @@ public class SceneChanger : MonoBehaviour
         }
         else
         {
-            Debug.LogError("SaveLoad �ν��Ͻ��� ã�� �� �����ϴ�");
+            Debug.LogError("Load Error");
         }
     }
 
@@ -81,7 +66,6 @@ public class SceneChanger : MonoBehaviour
     public void LoadSceneWithFade(string scene)
     {
         SceneManager.LoadScene(scene);
-        //StartCoroutine(FadeOutAndLoadScene(scene));
     }
 
     private IEnumerator FadeOutAndLoadScene(string sceneName)
@@ -90,7 +74,6 @@ public class SceneChanger : MonoBehaviour
         fadeImage.color = new Color(0, 0, 0, 0);
         Color color = fadeImage.color;
 
-        // ���̵� �ƿ� ȿ��
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
@@ -101,7 +84,6 @@ public class SceneChanger : MonoBehaviour
 
         SceneManager.LoadScene(sceneName);
 
-        // ���̵� �� ȿ�� (Optional)
         elapsedTime = 0f;
         while (elapsedTime < fadeDuration)
         {
