@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Breakable
+  - Enemy
+  - Boss
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -11,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Platform
+  - Ground
+  - Enemy
   - 
   - 
   - 
@@ -38,6 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2705049897
+    locked: 0
+  - name: Ground
+    uniqueID: 2706160039
+    locked: 0
+  - name: Wall
+    uniqueID: 99577557
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
