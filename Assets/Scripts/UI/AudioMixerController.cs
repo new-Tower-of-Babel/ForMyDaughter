@@ -59,7 +59,7 @@ public class AudioMixerController : MonoBehaviour
         m_MusicBGMSlider.value = bgmVolume;
         m_MusicSFXSlider.value = sfxVolume;
 
-        ApplyVolumeToMixer(masterVolume, bgmVolume, sfxVolume);
+        //ApplyVolumeToMixer(masterVolume, bgmVolume, sfxVolume);
     }
     
     private void ApplyVolumeToMixer(float masterVolume, float bgmVolume, float sfxVolume)
