@@ -63,7 +63,8 @@
 
 ## UML
 
-(UML파일 혹은 이미지 넣기)
+![Type Dependencies Diagram for Arrow and other elements](https://github.com/user-attachments/assets/cdf3db9a-defc-4bf0-9aaf-a4dfb2de55fb)
+
 
 ---
 ## 기술스택
