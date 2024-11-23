@@ -30,7 +30,6 @@
 ## 팀소개
 <a href="https://github.com/new-Tower-of-Babel/ForMyDaughter/graphs/contributors">
 <img src = "https://contrib.rocks/image?repo=new-Tower-of-Babel/ForMyDaughter">
-  <img ab = "https://github.com/keubung">
 </a>
 
 ## 개발기간
